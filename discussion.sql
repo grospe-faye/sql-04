@@ -73,3 +73,7 @@ SELECT * FROM songs WHERE album_id = 4 AND id < 8;
 SELECT * FROM songs WHERE song_name LIKE "%a"; --ending with a   
 SELECT * FROM songs WHERE song_name LIKE "a%"; --start with a   
 SELECT * FROM songs WHERE song_name LIKE "%a%"; --a in between   
+SELECT * FROM albums WHERE date_released LIKE "%201%";
+
+-- Sorting records
+SELECT * FROM songs ORDER BY song_name ASC;
