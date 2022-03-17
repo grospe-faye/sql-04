@@ -77,3 +77,7 @@ SELECT * FROM albums WHERE date_released LIKE "%201%";
 
 -- Sorting records
 SELECT * FROM songs ORDER BY song_name ASC;
+SELECT * FROM songs ORDER BY song_name DESC;
+
+-- Getting distinct records
+SELECT DISTINCT genre FROM songs;
