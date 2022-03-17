@@ -64,3 +64,12 @@ SELECT * FROM songs WHERE id = 1 OR id = 3 OR id = 5;
 
 -- Get specific IDs (IN)
 SELECT * FROM songs WHERE id in (1, 3, 5);
+SELECT * FROM songs WHERE genre in ("Pop", "K-POP");
+
+-- combining conditions
+SELECT * FROM songs WHERE album_id = 4 AND id < 8;
+
+-- find partial matches
+SELECT * FROM songs WHERE song_name LIKE "%a"; --ending with a   
+SELECT * FROM songs WHERE song_name LIKE "a%"; --start with a   
+SELECT * FROM songs WHERE song_name LIKE "%a%"; --a in between   
