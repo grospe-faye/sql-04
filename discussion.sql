@@ -81,3 +81,19 @@ SELECT * FROM songs ORDER BY song_name DESC;
 
 -- Getting distinct records
 SELECT DISTINCT genre FROM songs;
+
+-- Table Joins
+-- Combine artists and albums table
+SELECT * FROM artists
+	JOIN albums ON artists.id = albums.artist_id;
+
+-- Combine more than two albums
+SELECT * FROM artists
+	JOIN albums ON artists.id = albums.artist_id
+	JOIN songs ON albums.id = songs.album_id;
+
+-- Select columns to be included per table.
+SELECT artists.name, albums.album_title
+	FROM artists JOIN albums ON artists.id = albums.artist_id;
+
+-- Show artists without records on the right side of the joined table.
