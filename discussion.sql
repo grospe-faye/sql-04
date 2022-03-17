@@ -97,3 +97,6 @@ SELECT artists.name, albums.album_title
 	FROM artists JOIN albums ON artists.id = albums.artist_id;
 
 -- Show artists without records on the right side of the joined table.
+
+SELECT * FROM artists
+	LEFT JOIN albums ON artists.id = albums.artist_id;
